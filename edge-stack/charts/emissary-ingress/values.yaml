@@ -224,7 +224,7 @@ rbac:
 
 scope:
   # Set the AMBASSADOR_SINGLE_NAMESPACE environment variable and create namespaced RBAC if rbac.enabled: true
-  singleNamespace: false
+  singleNamespace: true
 
 serviceAccount:
   # Specifies whether a service account should be created
