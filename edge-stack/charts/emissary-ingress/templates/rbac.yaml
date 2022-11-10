@@ -19,7 +19,17 @@ aggregationRule:
   clusterRoleSelectors:
   - matchLabels:
       rbac.getambassador.io/role-group: {{ include "ambassador.rbacName" . }}
-rules: []
+rules: [
+  - apiGroups:
+    - apiextensions.k8s.io
+  resources:
+    - customresourcedefinitions
+  verbs:
+    - get
+    - list
+    - watch
+    - delete
+]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
