@@ -41,7 +41,7 @@ metadata:
   namespace: {{ include "ambassador.namespace" . }}
   labels:
     app.kubernetes.io/name: {{ include "ambassador.name" . }}-agent
-    {{- include "ambassador.labels" . | nindent 4 }}
+    {{- minclude "ambassador.labels" . | nindent 4 }}
     product: aes
 roleRef:
   apiGroup: rbac.authorization.k8s.io
